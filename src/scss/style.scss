@@ -1,0 +1,101 @@
+@import "../../node_modules/swiper/swiper-bundle.css";
+
+$white: #ffffff;
+$light-gray: #f8f8f8;
+$bright-gray: #eaeaea;
+$gray-black:rgba(248, 248, 248, 0.0001);
+$button-bg: #ff3e79;
+$text-black: #1b1c21;
+$text-gray: #7e7e82;
+$aboutUs-nav: #b8ffec;
+$shadow-purple: rgba(69, 79, 126, 0.02);
+$shadow-blue: rgba(14, 24, 80, 0.2);
+$shadow-blue-bright: rgba(14, 24, 80, 1);
+$antiflash-white: #F2F2F2;
+$gainsboro: #dddddd;
+$silver: #b5b6bc;
+$text-blue:blue;
+$red-trans:rgba(255, 0, 0, 0.5);
+$highlight: #41f6d7;
+$button-blue:#0072c6;
+$button-backgroundwhite: #f2f2f2;
+$line-modal-color:#D9FFF5;
+@mixin button-style {
+  display: block;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  background-color: $button-bg;
+  border-radius: 20px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+@import './fonts.scss';
+
+* {
+  font-family: 'TT Lakes';
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+	background-color: $light-gray;
+	@media (min-width: 1366px) {
+		display:flex;
+		min-width: 320px;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 1440px;
+	}
+	&:before {
+		@media (min-width: 1366px) {
+			content: "";
+			position: relative;
+			// width: 320px;
+			flex-shrink: 0;
+		}
+	}
+}
+.body{
+	&__lock{
+		overflow: hidden;
+	}
+}
+.wrapper{
+	flex: grow 1;
+}
+.swiper-pagination {
+  bottom: unset !important;
+  background: $light-gray;
+	position: static;
+  &-bullet {
+    height: 12px;
+    width: 12px;
+    background-color: $gainsboro;
+    opacity: 1;
+    transition-duration: 250ms;
+    &-active {
+      background-color: $silver;
+      transition-duration: 250ms;
+    }
+  }
+}
+button{
+	cursor: pointer
+}
+@import './blocks/sidebar.scss';
+@import './blocks/header.scss';
+@import './blocks/aboutUs.scss';
+@import './blocks/brands.scss';
+@import './blocks/technique.scss';
+@import './blocks/price.scss';
+@import './blocks/footer.scss';
+@import './blocks/modal.scss';
+@import './blocks/modalFeedback.scss';
+@import './blocks/modalCall.scss';

@@ -1,0 +1,27 @@
+.modal {
+  &-call {
+    &--active {
+      left: auto;
+      @media (min-width: 1366px) {
+        right: 0;
+      }
+      &::before {
+        display: block;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 320px;
+        width: calc(100% - 320px);
+        height: 100%;
+        z-index: -1;
+        background: $white;
+        mix-blend-mode: normal;
+        opacity: 0.96;
+        @media (min-width: 1366px) {
+          left: 0;
+					width: calc(100% - 440px);
+        }
+      }
+    }
+  }
+}
